@@ -1,5 +1,5 @@
 document.getElementById("chatForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent page reload
+    e.preventDefault();
 
     const userInput = document.getElementById("userInput").value;
 
@@ -13,7 +13,7 @@ document.getElementById("chatForm").addEventListener("submit", function (e) {
     .then(response => response.json())
     .then(data => {
         document.getElementById("response").textContent = data.response;
-        document.getElementById("userInput").value = ""; // Clear the input field
+        document.getElementById("userInput").value = "";
     })
     .catch(error => {
         console.error("Error:", error);
